@@ -1,0 +1,64 @@
+import { Code2, Linkedin, Github, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { navLinks } from "../data.js";
+
+export default function Footer() {
+  return (
+    <footer className="bg-blue-950 text-blue-200 pt-16 pb-8">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-[1.6fr_1fr_1fr] gap-10 mb-10">
+          <div>
+            <div className="flex items-center gap-2 text-white font-extrabold text-lg mb-3">
+              <Code2 size={18} /> CastroStudio
+            </div>
+            <p className="text-sm leading-relaxed max-w-xs">
+              Desenvolvimento de sites que geram resultados.
+            </p>
+            <div className="flex gap-3 mt-4">
+              {[Linkedin, Github, Instagram].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                >
+                  <Icon size={14} />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-white text-xs font-bold tracking-wider mb-4">NAVEGAÇÃO</h4>
+            <ul className="space-y-2.5 text-sm">
+              {navLinks.slice(0, 4).map((l) => (
+                <li key={l.label}>
+                  <a href={l.href} className="hover:text-white transition-colors">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white text-xs font-bold tracking-wider mb-4">CONTATO</h4>
+            <ul className="space-y-2.5 text-sm">
+              <li className="flex items-center gap-2">
+                <Phone size={13} /> (11) 98765-4321
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail size={13} /> contato@castrostudio.com
+              </li>
+              <li className="flex items-center gap-2">
+                <MapPin size={13} /> São Paulo - SP
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-white/10 pt-6 text-center text-xs text-blue-300">
+          © 2026 CastroStudio. Todos os direitos reservados.
+        </div>
+      </div>
+    </footer>
+  );
+}
