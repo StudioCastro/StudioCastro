@@ -25,7 +25,12 @@ export default function Projects() {
               key={p.title}
               className="border border-slate-200 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all"
             >
-              <div className={`h-36 bg-gradient-to-br ${p.grad} relative flex items-end p-3.5`}>
+              <div
+                className={`h-36 relative flex items-end p-3.5 ${
+                  p.img ? "bg-cover bg-center" : `bg-gradient-to-br ${p.grad}`
+                }`}
+                style={p.img ? { backgroundImage: `url(${p.img})` } : undefined}
+              >
                 <span className="absolute top-3 left-3 bg-white/90 text-blue-950 text-[10px] font-bold px-2.5 py-1 rounded-full">
                   {p.badge}
                 </span>
@@ -44,8 +49,12 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-4 text-xs font-semibold text-blue-950 border-t border-slate-200 pt-3">
-                  <a href="#">Ver projeto</a>
-                  <a href="#">Código</a>
+                  <a href={p.link || "#"} target="_blank" rel="noopener noreferrer">
+                    Ver projeto
+                  </a>
+                  <a href={p.code || "#"} target="_blank" rel="noopener noreferrer">
+                    Código
+                  </a>
                 </div>
               </div>
             </div>

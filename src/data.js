@@ -11,6 +11,7 @@ import {
   Eye,
   Headphones,
 } from "lucide-react";
+import leadpageViolao from "./images/leadpage-violao.png";
 
 export const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -64,10 +65,13 @@ export const projects = [
   },
   {
     badge: "Landing Page",
-    title: "Estética Automotiva",
-    desc: "Landing page para captação de leads e agendamento de serviços.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    grad: "from-neutral-900 to-neutral-600",
+    img: leadpageViolao,
+    title: "LeadPage — Aulas de Violão",
+    desc: "Landing page para captação de leads de aulas de violão, com galeria, depoimentos e formulário de agendamento.",
+    tags: ["React", "Vite", "CSS"],
+    grad: "from-neutral-900 to-red-700",
+    link: "https://studiocastro.github.io/LeadPage/",
+    code: "https://github.com/StudioCastro/LeadPage",
   },
   {
     badge: "Site institucional",
