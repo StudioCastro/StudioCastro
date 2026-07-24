@@ -1,5 +1,6 @@
-import { Code2, Linkedin, Github, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Linkedin, Github, Instagram, Phone, Mail, MapPin } from "lucide-react";
 import { navLinks } from "../data.js";
+import LogoMark from "./LogoMark.jsx";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-[1.6fr_1fr_1fr] gap-10 mb-10">
           <div>
             <div className="flex items-center gap-2 text-white font-extrabold text-lg mb-3">
-              <Code2 size={18} /> CastroStudio
+              <LogoMark solid="#ffffff" className="text-xl" /> CastroStudio
             </div>
             <p className="text-sm leading-relaxed max-w-xs">
               Desenvolvimento de sites que geram resultados.

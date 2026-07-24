@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Code2, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { navLinks } from "../data.js";
+import LogoMark from "./LogoMark.jsx";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2 font-extrabold text-lg text-blue-950">
-          <Code2 size={20} className="text-blue-600" />
+          <LogoMark solid="#172554" className="text-xl" />
           CastroStudio
         </a>
 

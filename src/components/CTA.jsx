@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MessageCircle } from "lucide-react";
+import ProjectTypeSelect from "./ProjectTypeSelect.jsx";
 
 const tiposProjeto = [
   "Site institucional",
@@ -33,18 +34,7 @@ export default function CTA() {
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            <select
-              id="tipo-projeto"
-              value={tipo}
-              onChange={(e) => setTipo(e.target.value)}
-              className="px-4 py-3 rounded-lg text-sm text-blue-950 focus:outline-none"
-            >
-              {tiposProjeto.map((t) => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
-              ))}
-            </select>
+            <ProjectTypeSelect options={tiposProjeto} value={tipo} onChange={setTipo} />
             <button
               type="button"
               onClick={handleWhatsApp}
