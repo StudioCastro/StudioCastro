@@ -71,7 +71,7 @@ export const projects = [
     tags: ["React", "Vite", "CSS"],
     grad: "from-neutral-900 to-red-700",
     link: "https://studiocastro.github.io/LeadPage/",
-    code: "https://github.com/StudioCastro/LeadPage",
+    code: "https://github.com/StudioCastro/StudioCastro",
   },
   {
     badge: "Site institucional",
