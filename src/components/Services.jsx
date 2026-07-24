@@ -9,7 +9,7 @@ export default function Services() {
           Serviços
         </span>
         <h2 className="text-3xl font-extrabold text-blue-950 mb-2">
-          Soluções completas para o seu negócio
+          Soluções web completas, do planejamento à entrega
         </h2>
         <p className="text-slate-500 mb-11">
           Desde um site institucional até sistemas web personalizados.

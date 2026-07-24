@@ -19,15 +19,15 @@ export default function About() {
         <div>
           <h3 className="text-lg font-bold text-blue-950">Prazer, Leandro Castro</h3>
           <p className="text-sm text-slate-500">
-            Desenvolvedor Front-end apaixonado por experiências digitais modernas, rápidas e
-            funcionais.
+            Desenvolvedor front-end com experiência em levar projetos do briefing à entrega —
+            sempre com comunicação clara em cada etapa.
           </p>
         </div>
       </div>
       <p className="text-sm text-slate-700 mb-5 flex gap-2">
         <CheckCircle2 size={16} className="text-blue-600 flex-shrink-0 mt-0.5" />
-        Ajudo empresas a terem presença digital profissional e a alcançarem mais clientes através
-        dos sites que constroem.
+        Já ajudei negócios de diferentes áreas a terem presença digital sólida, com sites que
+        geram credibilidade e resultado real.
       </p>
       <ul className="space-y-2.5">
         {highlights.map((item) => (

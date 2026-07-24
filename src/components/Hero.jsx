@@ -6,15 +6,15 @@ export default function Hero() {
       <div>
         <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-          Desenvolvedor Web Freelancer
+          Desenvolvedor Web · Sites & Soluções Web
         </span>
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-blue-950 mb-5">
-          Sites modernos que impulsionam o{" "}
-          <span className="text-blue-600">seu negócio</span>
+          Sites profissionais que transformam{" "}
+          <span className="text-blue-600">visitantes em clientes</span>
         </h1>
         <p className="text-slate-500 text-lg max-w-md mb-8">
-          Desenvolvimento de sites rápidos, responsivos e otimizados para gerar mais resultados
-          para a sua empresa.
+          Projetos web planejados do zero, com código limpo e foco em performance — para sua
+          empresa ter presença digital que passa confiança.
         </p>
         <div className="flex flex-wrap gap-3 mb-7">
           <a

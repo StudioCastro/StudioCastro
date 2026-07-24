@@ -12,7 +12,7 @@ export default function Footer() {
               <LogoMark solid="#ffffff" className="text-xl" /> CastroStudio
             </div>
             <p className="text-sm leading-relaxed max-w-xs">
-              Desenvolvimento de sites que geram resultados.
+              Soluções web profissionais, pensadas para gerar resultado e confiança.
             </p>
             <div className="flex gap-3 mt-4">
               {[Linkedin, Github, Instagram].map((Icon, i) => (
