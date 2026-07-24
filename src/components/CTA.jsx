@@ -1,12 +1,21 @@
 import { useState } from "react";
 import { MessageCircle } from "lucide-react";
 
+const tiposProjeto = [
+  "Site institucional",
+  "Landing Page",
+  "E-commerce",
+  "Sistema Web",
+  "Manutenção",
+  "Otimização (SEO)",
+];
+
 export default function CTA() {
-  const [nome, setNome] = useState("");
+  const [tipo, setTipo] = useState(tiposProjeto[0]);
 
   function handleWhatsApp() {
     const mensagem = encodeURIComponent(
-      `Olá!\n\nMeu nome é ${nome}.\n\nGostaria de solicitar um orçamento para um site.`
+      `Olá!\n\nGostaria de solicitar um orçamento para um projeto do tipo: ${tipo}.`
     );
     window.location.href = `https://wa.me/5531991079220?text=${mensagem}`;
   }
@@ -24,14 +33,18 @@ export default function CTA() {
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            <input
-              id="nome"
-              type="text"
-              value={nome}
-              onChange={(e) => setNome(e.target.value)}
-              placeholder="Seu nome"
+            <select
+              id="tipo-projeto"
+              value={tipo}
+              onChange={(e) => setTipo(e.target.value)}
               className="px-4 py-3 rounded-lg text-sm text-blue-950 focus:outline-none"
-            />
+            >
+              {tiposProjeto.map((t) => (
+                <option key={t} value={t}>
+                  {t}
+                </option>
+              ))}
+            </select>
             <button
               type="button"
               onClick={handleWhatsApp}
