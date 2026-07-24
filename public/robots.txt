@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://studiocastro.github.io/StudioCastro/sitemap.xml
