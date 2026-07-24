@@ -12,6 +12,7 @@ import {
   Headphones,
 } from "lucide-react";
 import leadpageViolao from "./images/leadpage-violao.png";
+import ecommerceImg from "./images/ecommerce.png";
 
 export const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -82,10 +83,12 @@ export const projects = [
   },
   {
     badge: "E-commerce",
+    img: ecommerceImg,
     title: "Loja Tech",
     desc: "Loja virtual completa com carrinho, pagamentos e painel administrativo.",
     tags: ["React", "Node.js", "MongoDB"],
     grad: "from-blue-950 to-blue-700",
+    link: "https://studiocastro.github.io/Ecommerce/",
   },
 ];
 
