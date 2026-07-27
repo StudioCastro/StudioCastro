@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import { navLinks } from "../data.js";
+import { Menu, X, LogIn } from "lucide-react";
+import { navLinks, clientPortalUrl } from "../data.js";
 import LogoMark from "./LogoMark.jsx";
 
 export default function Header() {
@@ -14,7 +14,7 @@ export default function Header() {
           CastroStudio
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((l) => (
             <a
               key={l.label}
@@ -26,15 +26,26 @@ export default function Header() {
           ))}
         </nav>
 
-        <a
-          href="#contato"
-          className="hidden md:inline-flex items-center gap-2 bg-blue-950 hover:bg-blue-900 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
-        >
-          Contato
-        </a>
+        <div className="hidden lg:flex items-center gap-3">
+          <a
+            href={clientPortalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-950 hover:text-blue-600 transition-colors"
+          >
+            <LogIn size={16} />
+            Área do Cliente
+          </a>
+          <a
+            href="#contato"
+            className="inline-flex items-center gap-2 bg-blue-950 hover:bg-blue-900 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
+          >
+            Contato
+          </a>
+        </div>
 
         <button
-          className="md:hidden p-2 text-blue-950"
+          className="lg:hidden p-2 text-blue-950"
           onClick={() => setMenuOpen((o) => !o)}
           aria-label="Abrir menu"
         >
@@ -43,7 +54,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden border-t border-slate-200 bg-white px-6 py-5 flex flex-col gap-4">
+        <div className="lg:hidden border-t border-slate-200 bg-white px-6 py-5 flex flex-col gap-4">
           {navLinks.map((l) => (
             <a
               key={l.label}
@@ -54,6 +65,16 @@ export default function Header() {
               {l.label}
             </a>
           ))}
+          <a
+            href={clientPortalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-blue-950 border border-slate-200 px-5 py-2.5 rounded-lg"
+          >
+            <LogIn size={16} />
+            Área do Cliente
+          </a>
           <a
             href="#contato"
             onClick={() => setMenuOpen(false)}

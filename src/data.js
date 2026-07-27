@@ -13,6 +13,11 @@ import {
 } from "lucide-react";
 import leadpageViolao from "./images/leadpage-violao.png";
 import ecommerceImg from "./images/ecommerce.png";
+import clinicaImg from "./images/Clínica.png";
+
+// Atualize manualmente sempre que abrir um novo túnel local para o Portal do Cliente
+// (ex: cloudflared tunnel --url http://localhost:5174) — a URL muda a cada execução.
+export const clientPortalUrl = "https://sam-honolulu-elimination-toll.trycloudflare.com";
 
 export const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -59,10 +64,13 @@ export const services = [
 export const projects = [
   {
     badge: "Site institucional",
+    img: clinicaImg,
     title: "Clínica Odontológica",
     desc: "Site moderno e responsivo para clínica com agendamento online.",
     tags: ["React", "Tailwind", "WhatsApp API"],
     grad: "from-emerald-800 to-emerald-500",
+    link: "https://studiocastro.github.io/ClinicaOdontologica/",
+    code: "https://github.com/StudioCastro/ClinicaOdontologica",
   },
   {
     badge: "Landing Page",
@@ -89,6 +97,7 @@ export const projects = [
     tags: ["React", "Node.js", "MongoDB"],
     grad: "from-blue-950 to-blue-700",
     link: "https://studiocastro.github.io/Ecommerce/",
+    code: "https://github.com/StudioCastro/Ecommerce",
   },
 ];
 
@@ -131,6 +140,39 @@ export const techs = [
   { name: "GitHub", icon: FaGithub, color: "#181717" },
   { name: "Figma", icon: FaFigma, color: "#F24E1E" },
   { name: "Vite", icon: SiVite, color: "#646CFF" },
+];
+
+export const faqs = [
+  {
+    question: "Quanto custa um site?",
+    answer:
+      "O investimento varia conforme o tipo de projeto, funcionalidades e nível de personalização. Após entendermos sua necessidade, elaboramos um orçamento detalhado, transparente e sem compromisso.",
+  },
+  {
+    question: "Quanto tempo leva para desenvolver um site?",
+    answer:
+      "O prazo depende da complexidade do projeto. Em média, um site institucional é entregue entre 7 e 20 dias úteis, enquanto sistemas e e-commerces podem demandar mais tempo.",
+  },
+  {
+    question: "Meu site será responsivo e aparecerá no Google?",
+    answer:
+      "Sim. Todos os projetos são desenvolvidos com design responsivo, garantindo uma ótima experiência em computadores, smartphones e tablets. Além disso, aplicamos técnicas de SEO desde o desenvolvimento — estrutura otimizada, desempenho e acessibilidade — para aumentar a visibilidade do seu site nos mecanismos de busca.",
+  },
+  {
+    question: "Vocês oferecem suporte após a entrega do site?",
+    answer:
+      "Sim. Após a publicação do projeto, oferecemos suporte para correções, orientações e, se desejar, planos de manutenção para manter o site sempre atualizado, seguro e com alto desempenho.",
+  },
+  {
+    question: "O site será seguro?",
+    answer:
+      "Sim. Seguimos as melhores práticas de segurança, incluindo HTTPS, validação de dados, proteção contra ataques comuns, otimização de desempenho e atualizações constantes para garantir a confiabilidade do sistema.",
+  },
+  {
+    question: "Quais formas de pagamento são aceitas?",
+    answer:
+      "Aceitamos PIX, cartão de crédito, cartão de débito e transferência bancária. Também oferecemos opções de parcelamento, conforme o projeto.",
+  },
 ];
 
 export const testimonials = [

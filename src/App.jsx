@@ -6,6 +6,7 @@ import Process from "./components/Process.jsx";
 import About from "./components/About.jsx";
 import Technologies from "./components/Technologies.jsx";
 import Testimonials from "./components/Testimonials.jsx";
+import FAQ from "./components/FAQ.jsx";
 import CTA from "./components/CTA.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -26,6 +27,7 @@ export default function App() {
       </section>
 
       <Testimonials />
+      <FAQ />
       <CTA />
       <Footer />
     </div>

@@ -23,10 +23,10 @@ export default function Projects() {
           {projects.map((p) => (
             <div
               key={p.title}
-              className="border border-slate-200 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all"
+              className="flex flex-col h-full border border-slate-200 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all"
             >
               <div
-                className={`h-36 relative flex items-end p-3.5 ${
+                className={`h-36 shrink-0 relative flex items-end p-3.5 ${
                   p.img ? "bg-cover bg-center" : `bg-gradient-to-br ${p.grad}`
                 }`}
                 style={p.img ? { backgroundImage: `url(${p.img})` } : undefined}
@@ -35,7 +35,7 @@ export default function Projects() {
                   {p.badge}
                 </span>
               </div>
-              <div className="p-4">
+              <div className="flex flex-col flex-1 p-4">
                 <h3 className="text-sm font-bold text-blue-950 mb-1.5">{p.title}</h3>
                 <p className="text-xs text-slate-500 mb-3 leading-relaxed">{p.desc}</p>
                 <div className="flex flex-wrap gap-1.5 mb-3.5">
@@ -48,7 +48,7 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4 text-xs font-semibold text-blue-950 border-t border-slate-200 pt-3">
+                <div className="flex gap-4 text-xs font-semibold text-blue-950 border-t border-slate-200 pt-3 mt-auto">
                   <a href={p.link || "#"} target="_blank" rel="noopener noreferrer">
                     Ver projeto
                   </a>

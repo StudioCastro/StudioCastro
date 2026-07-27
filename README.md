@@ -25,6 +25,7 @@ studioCastro/
         ├── About.jsx
         ├── Technologies.jsx
         ├── Testimonials.jsx
+        ├── FAQ.jsx
         ├── CTA.jsx
         └── Footer.jsx
 ```
@@ -56,6 +57,26 @@ Todo o texto dinâmico (serviços, projetos, tecnologias, depoimentos, links de 
 
 Dados de contato fictícios (WhatsApp, e-mail) estão em `src/components/CTA.jsx` e `src/components/Footer.jsx` — substitua pelos reais antes de publicar. **Atenção:** hoje o telefone do rodapé (DDD 11) e o número do WhatsApp do botão de orçamento (DDD 31) são inconsistentes — corrija os dois para o mesmo número real.
 
+## FAQ
+
+A seção `#faq` (`src/components/FAQ.jsx`) é uma grid estática minimalista (3 colunas no desktop, 2 no tablet, 1 no mobile) — cada card mostra pergunta e resposta direto, sem accordion. Isso é proposital: como nenhum card muda de altura, a seção nunca pode "empurrar"/desalinhar o que vem depois dela (a `CTA` de contato). As perguntas ficam em `faqs` dentro de `src/data.js`.
+
+## Área do Cliente (Portal do Cliente)
+
+O botão "Área do Cliente" no header (`Header.jsx`) aponta para `clientPortalUrl`, exportado em `src/data.js`. O Portal do Cliente é um projeto separado (`../client-portal`, backend Node/Express + PostgreSQL — não roda em hospedagem estática) e por enquanto só existe local, exposto via túnel manual quando necessário:
+
+```bash
+cd client-portal
+docker compose up -d postgres
+node --watch server/src/server.js &
+cd client && npm run dev &
+~/.local/bin/cloudflared tunnel --url http://localhost:5174
+```
+
+O `cloudflared` imprime uma URL pública nova a cada execução (ex: `https://algo-aleatorio.trycloudflare.com`) — **atualize manualmente `clientPortalUrl` em `data.js`** com essa URL sempre que abrir um novo túnel para o cliente testar. Fechar o túnel derruba o acesso externo na hora.
+
+Quando o Portal tiver hospedagem definitiva (Railway ou Hostinger VPS — ver roadmap do próprio projeto), `clientPortalUrl` passa a ser um endereço fixo e esse processo manual deixa de ser necessário.
+
 ## SEO
 
 - `index.html` tem `<title>`, `<meta description>`, Open Graph, Twitter Card, `canonical`, `robots` e JSON-LD (`ProfessionalService`) configurados.
@@ -85,3 +106,4 @@ Este projeto é uma **SPA estática sem backend, sem autenticação, sem banco d
 3. Atualizar `vite` para a v6+ quando houver tempo para testar (resolve o advisory do esbuild).
 4. Comprimir/otimizar `public/og-image.png` (ou substituir por uma arte 1200×630 dedicada).
 5. Revisar se os links de redes sociais no rodapé (`href="#"`) devem apontar para perfis reais.
+6. Migrar o Portal do Cliente (`../client-portal`) para uma hospedagem fixa (Railway ou Hostinger VPS) e trocar `clientPortalUrl` em `data.js` por esse endereço definitivo, eliminando a necessidade do túnel manual.
