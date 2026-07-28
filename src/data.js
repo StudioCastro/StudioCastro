@@ -14,6 +14,7 @@ import {
 import leadpageViolao from "./images/leadpage-violao.png";
 import ecommerceImg from "./images/ecommerce.png";
 import clinicaImg from "./images/Clínica.png";
+import cafeImg from "./images/Cafe.png";
 
 // Atualize manualmente sempre que abrir um novo túnel local para o Portal do Cliente
 // (ex: cloudflared tunnel --url http://localhost:5174) — a URL muda a cada execução.
@@ -84,10 +85,13 @@ export const projects = [
   },
   {
     badge: "Site institucional",
+    img: cafeImg,
     title: "Café da Vila",
     desc: "Site institucional com cardápio online e localização interativa.",
     tags: ["React", "Vite", "CSS Modules"],
     grad: "from-amber-900 to-amber-700",
+    link: "https://studiocastro.github.io/Cafe/",
+    code: "https://github.com/StudioCastro/Cafe",
   },
   {
     badge: "E-commerce",
