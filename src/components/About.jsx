@@ -10,16 +10,16 @@ const highlights = [
 
 export default function About() {
   return (
-    <div id="sobre" className="bg-slate-50 border border-slate-200 rounded-3xl p-8 flex flex-col h-full">
+    <div id="sobre" className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col h-full">
       <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 mb-5">
         <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
         Sobre mim
       </span>
-      <div className="flex gap-5 items-center mb-7">
+      <div className="flex flex-col sm:flex-row gap-5 items-center text-center sm:text-left mb-7">
         <img
           src={euImg}
           alt="Leandro Castro"
-          className="w-28 h-28 rounded-2xl object-cover flex-shrink-0"
+          className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover flex-shrink-0"
         />
         <div>
           <h3 className="text-xl font-bold text-blue-950 mb-2">Prazer, Leandro Castro</h3>
