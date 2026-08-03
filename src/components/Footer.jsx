@@ -1,4 +1,4 @@
-import { Linkedin, Github, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Github, Phone, Mail, MapPin } from "lucide-react";
 import { navLinks } from "../data.js";
 import LogoMark from "./LogoMark.jsx";
 
@@ -15,15 +15,14 @@ export default function Footer() {
               Soluções web profissionais, pensadas para gerar resultado e confiança.
             </p>
             <div className="flex gap-3 mt-4">
-              {[Linkedin, Github, Instagram].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
-                >
-                  <Icon size={14} />
-                </a>
-              ))}
+              <a
+                href="https://github.com/StudioCastro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+              >
+                <Github size={14} />
+              </a>
             </div>
           </div>
 

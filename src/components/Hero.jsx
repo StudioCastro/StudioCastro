@@ -1,4 +1,7 @@
 import { Send, CheckCircle2 } from "lucide-react";
+import telasImg from "../images/telas.png";
+import cafeNotebookImg from "../images/cafeNotebook.png";
+import cafeCelularImg from "../images/cafeCelular.png";
 
 export default function Hero() {
   return (
@@ -43,44 +46,36 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative">
-        <div className="relative max-w-md mx-auto bg-blue-950 rounded-2xl p-4 pb-9 shadow-2xl">
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-6 min-h-[220px]">
-            <h4 className="text-xl font-bold text-blue-950 leading-snug mb-4">
-              Seu sorriso,
-              <br />
-              nossa <span className="text-blue-600">missão</span>
-            </h4>
-            <span className="inline-block bg-blue-600 text-white text-[11px] font-semibold px-3.5 py-2 rounded-md">
-              Agendar avaliação
-            </span>
-            <div className="flex gap-2.5 mt-6">
-              {[
-                ["+15", "Anos"],
-                ["+2.5k", "Pacientes"],
-                ["+99%", "Satisfação"],
-              ].map(([n, l]) => (
-                <div key={l} className="bg-white rounded-lg px-3 py-2 shadow-sm text-xs font-bold text-blue-950">
-                  {n}
-                  <div className="text-[9px] font-medium text-slate-400">{l}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="hidden sm:block absolute -right-5 -bottom-8 w-32 bg-blue-950 rounded-2xl p-2 shadow-2xl">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-3 min-h-[170px]">
-              <h5 className="text-[11px] font-bold text-blue-950 leading-snug mb-2">
-                Seu sorriso,
-                <br />
-                nossa <span className="text-blue-600">missão</span>
-              </h5>
-              <span className="inline-block bg-blue-600 text-white text-[8px] font-semibold px-2.5 py-1.5 rounded">
-                Agendar
-              </span>
-            </div>
-          </div>
-        </div>
+      <div className="relative max-w-lg mx-auto">
+        <img
+          src={telasImg}
+          alt="Site do Café da Vila exibido em notebook e celular, demonstrando responsividade"
+          className="w-full h-auto select-none pointer-events-none"
+          draggable={false}
+        />
+        <div
+          className="absolute bg-cover bg-center rounded-sm overflow-hidden"
+          style={{
+            left: "18.6%",
+            top: "12.0%",
+            width: "65.6%",
+            height: "66.1%",
+            backgroundImage: `url(${cafeNotebookImg})`,
+            clipPath:
+              "polygon(0 0, 100% 0, 100% 27.14%, 92.97% 27.14%, 91.38% 27.73%, 90.68% 28.32%, 90.19% 28.91%, 89.89% 29.50%, 89.59% 30.09%, 89.3% 30.83%, 89.3% 100%, 0 100%)",
+          }}
+        />
+        <div
+          className="absolute bg-cover bg-center overflow-hidden"
+          style={{
+            left: "77.6%",
+            top: "30.6%",
+            width: "15.8%",
+            height: "54.6%",
+            borderRadius: "7.8% / 3.3%",
+            backgroundImage: `url(${cafeCelularImg})`,
+          }}
+        />
       </div>
     </section>
   );

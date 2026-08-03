@@ -20,7 +20,7 @@ export default function ProjectTypeSelect({ options, value, onChange }) {
         onClick={() => setOpen((o) => !o)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className="flex items-center justify-between gap-3 min-w-[210px] bg-white text-blue-950 text-sm font-semibold pl-4 pr-3 py-3 rounded-lg shadow-sm ring-1 ring-black/5 hover:ring-blue-200 transition-all"
+        className="flex items-center justify-between gap-3 w-full sm:w-auto sm:min-w-[210px] bg-white text-blue-950 text-sm font-semibold pl-4 pr-3 py-3 rounded-lg shadow-sm ring-1 ring-black/5 hover:ring-blue-200 transition-all"
       >
         {value}
         <ChevronDown
@@ -32,7 +32,7 @@ export default function ProjectTypeSelect({ options, value, onChange }) {
       {open && (
         <ul
           role="listbox"
-          className="absolute left-0 z-10 mt-2 w-full min-w-[210px] bg-white rounded-xl shadow-xl ring-1 ring-black/5 py-1.5 overflow-hidden"
+          className="absolute left-0 z-10 mt-2 w-full sm:min-w-[210px] bg-white rounded-xl shadow-xl ring-1 ring-black/5 py-1.5 overflow-hidden"
         >
           {options.map((opt) => (
             <li key={opt}>

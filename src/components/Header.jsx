@@ -27,7 +27,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a
+          {/* <a
             href={clientPortalUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -35,7 +35,7 @@ export default function Header() {
           >
             <LogIn size={16} />
             Área do Cliente
-          </a>
+          </a> */}
           <a
             href="#contato"
             className="inline-flex items-center gap-2 bg-blue-950 hover:bg-blue-900 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
@@ -65,7 +65,7 @@ export default function Header() {
               {l.label}
             </a>
           ))}
-          <a
+          {/* <a
             href={clientPortalUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -74,7 +74,7 @@ export default function Header() {
           >
             <LogIn size={16} />
             Área do Cliente
-          </a>
+          </a> */}
           <a
             href="#contato"
             onClick={() => setMenuOpen(false)}
