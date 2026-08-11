@@ -43,13 +43,13 @@ export default function Footer() {
             <h4 className="text-white text-xs font-bold tracking-wider mb-4">CONTATO</h4>
             <ul className="space-y-2.5 text-sm">
               <li className="flex items-center gap-2">
-                <Phone size={13} /> (11) 98765-4321
+                <Phone size={13} /> (31) 99107-9220
               </li>
               <li className="flex items-center gap-2">
-                <Mail size={13} /> contato@castrostudio.com
+                <Mail size={13} /> leandro.dev1999@hotmail.com
               </li>
               <li className="flex items-center gap-2">
-                <MapPin size={13} /> São Paulo - SP
+                <MapPin size={13} /> Belo Horizonte - MG
               </li>
             </ul>
           </div>
