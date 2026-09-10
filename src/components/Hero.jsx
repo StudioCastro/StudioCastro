@@ -1,5 +1,5 @@
 import { Send, CheckCircle2 } from "lucide-react";
-import telasImg from "../images/telas.png";
+import telasImg from "../images/telas-transparent.png";
 import cafeNotebookImg from "../images/cafeNotebook.png";
 import cafeCelularImg from "../images/cafeCelular.png";
 
@@ -7,50 +7,51 @@ export default function Hero() {
   return (
     <section id="inicio" className="max-w-6xl mx-auto px-6 pt-16 pb-14 grid md:grid-cols-2 gap-14 items-center">
       <div>
-        <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 mb-4">
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+        <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-400 mb-4">
+          <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
           Desenvolvedor Web · Sites & Soluções Web
         </span>
-        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-blue-950 mb-5">
+        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-5">
           Sites profissionais que transformam{" "}
-          <span className="text-blue-600">visitantes em clientes</span>
+          <span className="text-blue-400">visitantes em clientes</span>
         </h1>
-        <p className="text-slate-500 text-lg max-w-md mb-8">
+        <p className="text-slate-400 text-lg max-w-md mb-8">
           Projetos web planejados do zero, com código limpo e foco em performance — para sua
           empresa ter presença digital que passa confiança.
         </p>
         <div className="flex flex-wrap gap-3 mb-7">
           <a
             href="#contato"
-            className="inline-flex items-center gap-2 bg-blue-950 hover:bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
           >
             <Send size={16} /> Solicitar orçamento
           </a>
           <a
             href="#projetos"
-            className="inline-flex items-center gap-2 bg-white border border-slate-200 hover:border-blue-950 text-blue-950 font-semibold px-6 py-3 rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 bg-white/5 border border-white/15 hover:border-blue-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
           >
             Ver projetos
           </a>
         </div>
-        <div className="flex flex-wrap gap-6 text-sm text-slate-500 font-medium">
+        <div className="flex flex-wrap gap-6 text-sm text-slate-400 font-medium">
           <span className="flex items-center gap-1.5">
-            <CheckCircle2 size={15} className="text-emerald-500" /> Entrega no prazo
+            <CheckCircle2 size={15} className="text-emerald-400" /> Entrega no prazo
           </span>
           <span className="flex items-center gap-1.5">
-            <CheckCircle2 size={15} className="text-emerald-500" /> Suporte pós-entrega
+            <CheckCircle2 size={15} className="text-emerald-400" /> Suporte pós-entrega
           </span>
           <span className="flex items-center gap-1.5">
-            <CheckCircle2 size={15} className="text-emerald-500" /> Satisfação garantida
+            <CheckCircle2 size={15} className="text-emerald-400" /> Satisfação garantida
           </span>
         </div>
       </div>
 
       <div className="relative max-w-lg mx-auto">
+        <div className="absolute inset-0 bg-blue-600/20 blur-[100px] rounded-full" />
         <img
           src={telasImg}
           alt="Site do Café da Vila exibido em notebook e celular, demonstrando responsividade"
-          className="w-full h-auto select-none pointer-events-none"
+          className="relative w-full h-auto select-none pointer-events-none"
           draggable={false}
         />
         <div

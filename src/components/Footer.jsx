@@ -4,12 +4,12 @@ import LogoMark from "./LogoMark.jsx";
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-950 text-blue-200 pt-16 pb-8">
+    <footer className="bg-slate-950 border-t border-white/10 text-slate-400 pt-16 pb-8">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-[1.6fr_1fr_1fr] gap-10 mb-10">
           <div>
-            <div className="flex items-center gap-2 text-white font-extrabold text-lg mb-3">
-              <LogoMark solid="#ffffff" className="text-xl" /> CastroStudio
+            <div className="flex items-center gap-2.5 text-white font-extrabold text-lg mb-3">
+              <LogoMark className="w-9 h-9" /> CastroStudio
             </div>
             <p className="text-sm leading-relaxed max-w-xs">
               Soluções web profissionais, pensadas para gerar resultado e confiança.
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 text-center text-xs text-blue-300">
+        <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-500">
           © 2026 CastroStudio. Todos os direitos reservados.
         </div>
       </div>

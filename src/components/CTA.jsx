@@ -24,7 +24,7 @@ export default function CTA() {
   return (
     <section id="contato" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="bg-blue-950 rounded-3xl p-6 sm:p-10 md:p-12 flex flex-wrap items-center justify-between gap-6">
+        <div className="bg-gradient-to-br from-blue-700 to-blue-950 border border-white/10 rounded-3xl p-6 sm:p-10 md:p-12 flex flex-wrap items-center justify-between gap-6">
           <div>
             <h2 className="text-2xl font-extrabold text-white mb-2">
               Vamos tirar seu projeto do papel?
